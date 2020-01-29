@@ -2,17 +2,21 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { GiTeapot } from "react-icons/gi"
-import Navbar from "../components/Globals/Navbar"
 import { /* Link, */ graphql } from "gatsby"
-import BackgroundHero from '../components/Globals/BackgroundHero'
-
+import BackgroundHero from "../components/Globals/BackgroundHero"
+import Info from "../components/Home/info"
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
-    <Navbar />
-    <BackgroundHero img={data.img.childImageSharp.fluid} title="regular tea" styleClass="default-background">    <GiTeapot />
-</BackgroundHero>
-    
+    <BackgroundHero
+      img={data.img.childImageSharp.fluid}
+      title="regular tea"
+      styleClass="default-background"
+    >
+      {" "}
+      <GiTeapot />
+    </BackgroundHero>
+    <Info></Info>
   </Layout>
 )
 export const query = graphql`

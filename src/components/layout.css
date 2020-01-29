@@ -1,5 +1,5 @@
 :root {
-  --mainBrown: rgb(45, 30, 241);
+  --mainBrown: #2d1e1f;
   --mainYellow: rgb(255, 158, 9);
   --mainGrey: rgb(236, 232, 220);
   --mainWhite: #fff;
@@ -25,6 +25,7 @@ h6 {
 .text-yellow {
   color: var(--mainYellow);
 }
+
 .cart-icon {
   cursor: pointer;
   color: var(--mainYellow);
@@ -35,8 +36,19 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(rgba(9, 255, 140, 0.2),rgba(9, 158, 9, 0.2));
+  background: linear-gradient(rgba(9, 255, 140, 0.2), rgba(9, 158, 9, 0.2));
   background-position: center;
   background-size: cover;
-  opacity:1 !important; 
+  opacity: 1 !important;
+}
+.btn-yellow {
+  color: var(--mainYellow);
+  border-color: var(--mainYellow);
+}
+.btn-yellow:hover {
+  background: var(--mainYellow);
+  color: var(--mainBrown) !important;
+}
+.footer {
+  background: var(--mainBrown);
 }
