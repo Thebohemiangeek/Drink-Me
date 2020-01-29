@@ -1,15 +1,11 @@
 :root {
-  --mainBrown: #2d1ef1;
-  --mainYellow: #ff9e09;
-  --mainGrey: #ece8dc;
+  --mainBrown: rgb(45, 30, 241);
+  --mainYellow: rgb(255, 158, 9);
+  --mainGrey: rgb(236, 232, 220);
   --mainWhite: #fff;
   --mainDark: #222;
 }
 
-html {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
 body {
   margin: 0;
   background: var(--mainWhite);
@@ -26,11 +22,21 @@ h6 {
   letter-spacing: 0.25rem !important;
 }
 
-.text-yellow{
+.text-yellow {
   color: var(--mainYellow);
 }
-.cart-icon{
-  cursor: pointer; 
-  color:var(--mainYellow);
-font-size: 2rem;
+.cart-icon {
+  cursor: pointer;
+  color: var(--mainYellow);
+  font-size: 2rem;
+}
+.default-background {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(9, 255, 140, 0.2),rgba(9, 158, 9, 0.2));
+  background-position: center;
+  background-size: cover;
+  opacity:1 !important; 
 }

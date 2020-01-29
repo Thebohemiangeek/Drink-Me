@@ -3,19 +3,27 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { GiTeapot } from "react-icons/gi"
 import Navbar from "../components/Globals/Navbar"
+import { /* Link, */ graphql } from "gatsby"
+import BackgroundHero from '../components/Globals/BackgroundHero'
 
-
-
- const IndexPage = () => (
-
+const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
-    <Navbar/>
-    <h1>Hi people</h1>
-    <GiTeapot/>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
+    <Navbar />
+    <BackgroundHero img={data.img.childImageSharp.fluid} title="regular tea" styleClass="default-background">    <GiTeapot />
+</BackgroundHero>
+    
   </Layout>
 )
-
+export const query = graphql`
+  {
+    img: file(relativePath: { eq: "default-background.jpeg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+  }
+`
 export default IndexPage
