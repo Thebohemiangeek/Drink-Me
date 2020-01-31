@@ -25,7 +25,6 @@ const Info = () => {
             </p>
             <Link to="/about">
               <button className="btn text--uppercase btn-yellow">
-                {" "}
                 about page
               </button>
             </Link>

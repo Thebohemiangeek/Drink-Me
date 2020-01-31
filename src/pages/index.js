@@ -5,6 +5,8 @@ import { GiTeapot } from "react-icons/gi"
 import { /* Link, */ graphql } from "gatsby"
 import BackgroundHero from "../components/Globals/BackgroundHero"
 import Info from "../components/Home/info"
+import Menu from "../components/Home/Menu"
+
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
@@ -16,7 +18,8 @@ const IndexPage = ({ data }) => (
       {" "}
       <GiTeapot />
     </BackgroundHero>
-    <Info></Info>
+    <Info />
+    <Menu items={data.menu} />
   </Layout>
 )
 export const query = graphql`
@@ -25,6 +28,24 @@ export const query = graphql`
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    menu: allContentfulDrinkItem {
+      edges {
+        node {
+          id
+          title
+          description {
+            description
+          }
+          price
+          category
+          image {
+            fixed(width: 59, height: 50) {
+              ...GatsbyContentfulFixed_tracedSVG
+            }
+          }
         }
       }
     }

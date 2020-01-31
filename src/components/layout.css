@@ -56,3 +56,11 @@ h6 {
 .about-background {
   min-height: 60vh;
 }
+
+.logo {
+  margin: -10px;
+  width: 80px;
+}
+.menu {
+  background: var(--mainGrey);
+}

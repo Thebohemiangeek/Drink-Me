@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-sm bg-light navbar-light">
       <Link to="/" className="navbar-brand">
-        <img src={logo} alt="logo" />
+        <img src={logo} alt="logo" className="logo" />
       </Link>
       <button className="navbar-toggler" type="button" onClick={toggleNav}>
         <span className="navbar-toggler-icon"></span>
