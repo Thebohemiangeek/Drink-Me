@@ -6,7 +6,7 @@ import { /* Link, */ graphql } from "gatsby"
 import BackgroundHero from "../components/Globals/BackgroundHero"
 import Info from "../components/Home/info"
 import Menu from "../components/Home/Menu"
-
+import Products from "../components/Home/Products"
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
@@ -20,6 +20,7 @@ const IndexPage = ({ data }) => (
     </BackgroundHero>
     <Info />
     <Menu items={data.menu} />
+    <Products />
   </Layout>
 )
 export const query = graphql`
