@@ -9,9 +9,11 @@ const getProducts = graphql`
       edges {
         node {
           title
+          price
           image {
             fluid(maxHeight: 426) {
               ...GatsbyContentfulFluid_withWebp
+              src
             }
           }
           id
