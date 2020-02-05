@@ -1,8 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { GiTeapot } from "react-icons/gi"
-import { /* Link, */ graphql } from "gatsby"
+import { graphql } from "gatsby"
 import BackgroundHero from "../components/Globals/BackgroundHero"
 import Info from "../components/Home/info"
 import Menu from "../components/Home/Menu"
@@ -17,7 +16,6 @@ const IndexPage = ({ data }) => (
       styleClass="default-background"
     >
       {" "}
-      <GiTeapot />
     </BackgroundHero>
     <Info />
     <Menu items={data.menu} />
